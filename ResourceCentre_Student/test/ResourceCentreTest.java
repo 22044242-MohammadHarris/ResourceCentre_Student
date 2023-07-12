@@ -257,8 +257,6 @@ public class ResourceCentreTest {
 		// write your code here
 		// Test case 1: Return a loaned out item
 		
-		
-		
 				assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
 				ResourceCentre.addChromebook(chromebookList, cb1);
 				Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
