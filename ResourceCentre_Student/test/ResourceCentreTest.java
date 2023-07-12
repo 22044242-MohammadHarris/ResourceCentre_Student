@@ -89,7 +89,7 @@ public class ResourceCentreTest {
 				// Add an item that has missing detail
 				Chromebook cb_missing = new Chromebook("CB0016", "", "Win 10");
 				ResourceCentre.addChromebook(chromebookList,cb_missing);
-				assertEquals("Test that the Camcorder arraylist size is unchange.", 2, chromebookList.size());
+				assertEquals("Test that the Chromebook arraylist size is unchange.", 2, chromebookList.size());
 	}
 
 	@Test
@@ -226,7 +226,7 @@ public class ResourceCentreTest {
 			// Test case 4 - Missing details
 			ResourceCentre.addChromebook(chromebookList, cb3);
 			assertTrue("Test that there is an item available", chromebookList.get(2).getIsAvailable());
-			ok = ResourceCentre.doLoanChromebook(chromebookList, "CB003", "" );
+			ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "" );
 			assertFalse("Test that the loan fails.", ok);
 	}
 
@@ -257,7 +257,7 @@ public class ResourceCentreTest {
 		// write your code here
 		// Test case 1: Return a loaned out item
 		
-				assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+				assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 				ResourceCentre.addChromebook(chromebookList, cb1);
 				Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
 				assertTrue("Test if CB0011 is successfully loaned out.", ok);
