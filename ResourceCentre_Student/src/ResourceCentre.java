@@ -154,11 +154,8 @@ public class ResourceCentre {
 		// write your code here
 		for(Chromebook cb : chromebookList) {
 			if (cb.getIsAvailable()) {
-				output += String.format("%-10s %-30s %-10s %-10s %-20s\n", 
-					cb.getAssetTag(),
-					cb.getDescription(), 
-					ResourceCentre.showAvailability(cb.getIsAvailable()),
-					cb.getDueDate(),cb.getOs());
+				output += String.format("%-80s \n", 
+					cb.toString());
 			}
 		}
 		return output;
