@@ -129,12 +129,14 @@ public class ResourceCentre {
 		String output = "";
 
 		for (int i = 0; i < camcorderList.size(); i++) {
-			if (camcorderList.get(i).getIsAvailable()) {
-				output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
-					camcorderList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(camcorderList.get(i).getIsAvailable()),
-					camcorderList.get(i).getDueDate(),camcorderList.get(i).getOpticalZoom());
+			Camcorder cam = camcorderList.get(i);
+			
+			if(cam.getIsAvailable()) {
+				output += String.format("%-80s \n", 
+						cam.toString());
 			}
+			
+			
 		}
 		return output;
 	}
@@ -143,7 +145,9 @@ public class ResourceCentre {
 		ResourceCentre.setHeader("CAMCORDER LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
 				"AVAILABLE", "DUE DATE","OPTICAL ZOOM");
-		 output += retrieveAllCamcorder(camcorderList);	
+	
+		
+		output += retrieveAllCamcorder(camcorderList);	
 		System.out.println(output);
 	}
 
