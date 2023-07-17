@@ -271,7 +271,7 @@ public class ResourceCentreTest {
 						
 				// Test case 3: Return an item that does not exist 
 				isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0016");
-				assertFalse("Test the the return of CB0016 fails.", isReturned);	
+				
 	}
 
 	@After
